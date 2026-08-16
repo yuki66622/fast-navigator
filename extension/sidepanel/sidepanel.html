@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fast Navigator</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="panel-header">
+    <input id="search" type="search" placeholder="Search name, company, role, location…" autocomplete="off">
+    <div class="nl-row">
+      <input id="nl" type="text" placeholder="Ask in natural language (local sidecar)…" autocomplete="off">
+      <button id="ask">Ask</button>
+    </div>
+    <div id="derived" class="derived hidden">
+      <span id="derived-text"></span>
+      <button id="derived-clear" title="Clear the derived query">×</button>
+    </div>
+    <div class="controls">
+      <select id="status-filter">
+        <option value="all">All statuses</option>
+        <option value="pending">Pending</option>
+        <option value="viewed">Viewed</option>
+        <option value="done">Done</option>
+      </select>
+      <button id="rescan" title="Rescan the current page">Rescan</button>
+      <button id="clear" title="Clear the local index and progress">Clear</button>
+      <label class="agent-toggle" title="Let a local MCP agent call this panel's tools (bridge on localhost only)">
+        <input type="checkbox" id="agent-mode"> Agent
+      </label>
+    </div>
+  </header>
+
+  <div id="health" class="health hidden"></div>
+  <div id="notice" class="notice hidden"></div>
+
+  <ul id="results" class="results"></ul>
+
+  <ul id="agent-log" class="agent-log hidden" title="Agent actions on this tab"></ul>
+
+  <footer id="footer" class="panel-footer"></footer>
+
+  <script src="../platform/platform.js"></script>
+  <script src="../core/indexer.js"></script>
+  <script src="../core/query.js"></script>
+  <script src="../core/health.js"></script>
+  <script src="../core/scanner.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

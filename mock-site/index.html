@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="MockCRM">
+  <title>MockCRM — Contacts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MockCRM <span class="brand-sub">demo testbed — all data is generated and fake</span></div>
+    <nav class="structure-switch" id="structure-switch" aria-label="Structure version"></nav>
+  </header>
+
+  <div class="params-bar" id="params-bar"></div>
+
+  <main id="view-list" class="view">
+    <div class="list-viewport" id="list-viewport">
+      <div class="list-canvas" id="contact-list"></div>
+    </div>
+  </main>
+
+  <main id="view-detail" class="view hidden">
+    <div class="detail-card" id="detail-card"></div>
+  </main>
+
+  <footer class="statusbar" id="statusbar"></footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

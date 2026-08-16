@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Fast Navigator (local prototype)",
+  "version": "0.1.0",
+  "description": "Deterministic page indexing, search, locate and progress persistence. Local research prototype; injects only on explicit user action (activeTab).",
+  "minimum_chrome_version": "114",
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "action": {
+    "default_title": "Fast Navigator: scan this page"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+*.log
+.env
+bench/results/*
+!bench/results/latest.md
+.venv/
+__pycache__/
+.claude/settings.local.json
+*.crx
+
+# Chrome extension private signing key (never commit)
+*.pem

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- MockAdapter matches on this marker -->
+  <meta name="application-name" content="MockCRM">
+  <!-- flow demo view (multi-step page-action testbed; all data fake) -->
+  <meta name="mockcrm-view" content="flow">
+  <title>MockCRM — Flow demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #1c1c28; background: #f7f7fa; }
+    .topbar { padding: 10px 16px; background: #fff; border-bottom: 1px solid #d9d9e3; font-weight: 700; }
+    .topbar .sub { font-weight: 400; font-size: 12px; color: #6b6b7b; margin-left: 8px; }
+    main { max-width: 720px; margin: 24px auto; padding: 0 16px; }
+    .card { background: #fff; border: 1px solid #d9d9e3; border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+    .hidden { display: none !important; }
+    button, .btn { font: inherit; padding: 6px 12px; border: 1px solid #c9c9d6; border-radius: 6px; background: #eef2ff; color: #33418a; cursor: pointer; text-decoration: none; display: inline-block; }
+    button:hover, .btn:hover { background: #dfe6ff; }
+    .muted { color: #6b6b7b; font-size: 13px; }
+    .person-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eee; }
+    .person-row .grow { flex: 1; }
+    .person-row [data-field="name"] { font-weight: 600; }
+    .person-row [data-field="role"] { color: #6b6b7b; font-size: 13px; }
+    .info-panel { margin-top: 12px; padding: 12px; background: #f4f6ff; border-radius: 6px; }
+    .email-shown { font-weight: 600; }
+    .reveal-error { color: #a03030; }
+    .spinner { color: #33418a; }
+    h2 { margin-top: 0; }
+    .breadcrumb { font-size: 12px; color: #6b6b7b; margin-bottom: 12px; }
+    .breadcrumb a { color: #33418a; }
+  </style>
+</head>
+<body>
+  <div class="topbar">MockCRM <span class="sub">flow demo — deterministic page actions · all data is fake</span></div>
+  <main id="app"></main>
+  <script src="flow.js"></script>
+</body>
+</html>

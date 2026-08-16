@@ -1,0 +1,19 @@
+{
+  "name": "fast-navigator-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local prototype: deterministic indexing/search/locate/state layer for browser agents. Generic core + site adapters; MockCRM testbed.",
+  "scripts": {
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:integration": "node --test --test-concurrency=1 --test-timeout=180000 \"tests/integration/*.test.js\"",
+    "test:all": "npm test && npm run test:integration",
+    "bench": "node bench/run.js",
+    "bench:quick": "node bench/run.js --quick",
+    "mock-site": "python3 -m http.server 8765 --directory mock-site",
+    "sidecar": "python3 sidecar/server.py",
+    "mcp": "python3 sidecar/mcp_server.py"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.61.1"
+  }
+}
